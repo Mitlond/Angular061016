@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="SampleApp">
+ <head>
+  <link href="style4.css" rel="stylesheet"/>
+   <link href="css/bootstrap.css" rel="stylesheet"/>
+   <link href="css/bootstrap-theme.css" rel="stylesheet"/>
+   
+   <script src="angular-1.5.8/angular.js"></script>
+     <meta charset="utf-8">
+ <title>MM</title>
+ <script>
+  var app=angular.module("SampleApp", []);
+  app.controller("SampleAppCtrl", function ($scope){
+  $scope.clickHandler=function(){
+  $scope.classNames="test-div lightGreen";
+  }
+});
+ </script>
+</head>
+<body ng-controller="SampleAppCtrl">
+<div class="container">
+<button ng-click="clickHandler()"> Set classes</button>
+<div ng-class="classNames">Test</div>
+</div>
+</body>
+</html>

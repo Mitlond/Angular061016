@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="SampleApp">
+ <head>
+  <link href="style.css" rel="stylesheet"/>
+   <link href="css/bootstrap.css" rel="stylesheet"/>
+   <link href="css/bootstrap-theme.css" rel="stylesheet"/>
+   
+   <script src="angular-1.5.8/angular.js"></script>
+     <meta charset="utf-8">
+ <title>MM</title>
+ <script>
+  var app=angular.module("SampleApp", []);
+  app.controller("SampleAppCtrl", function ($scope){
+  $scope.showElem1=false;
+  $scope.showElem2=false;
+  $scope.showElem3=false;
+});
+ </script>
+</head>
+<body ng-controller="SampleAppCtrl">
+<div>
+<input type="checkbox" ng-model="showElem1"/> show Element 1<br />
+<input type="checkbox" ng-model="showElem2"/> show Element 2<br />
+<input type="checkbox" ng-model="showElem3"/> show Element 3
+</div>
+<div id="d1" ng-show="showElem1"> Element 1</div>
+<div id="d2" ng-show="showElem2"> Element 2</div>
+<div id="d3" ng-show="showElem3"> Element 3</div>
+</body>
+</html>
